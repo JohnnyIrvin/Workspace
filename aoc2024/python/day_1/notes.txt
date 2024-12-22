@@ -1,0 +1,11 @@
+location ID, a unique number.
+lists compared side by side
+list compared smallest to highest.
+
+1. Need to sort each list
+2. Compare how far apart each item is, abs(x-y)
+3. Sum all all differences.
+
+Sum(i=0 to n) of abs(x[i]-y[i]) where n is the total array size, x is array one and y is array two.
+
+
