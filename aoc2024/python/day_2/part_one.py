@@ -6,11 +6,13 @@ def is_safe(report: list[int]) -> bool:
     for index in range(1, len(report)):
         window = report[index - 1: index + 2]
         last, value, next = pop(window), pop(window), pop(window)
-            
-        if next and (last < value) != (value < next):
-            return False
         
-        if abs(value - last) not in range(1, 4):
+        rules = [
+            lambda: abs(value - last) in range(1, 4),
+            lambda: (last < value) == (value < next) if next else True
+        ]
+        
+        if any(not rule() for rule in rules):
             return False
     
     return True
