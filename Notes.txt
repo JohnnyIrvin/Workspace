@@ -32,3 +32,7 @@ git config --local core.hooksPath .githooks/
 
 https://www.conventionalcommits.org/en/v1.0.0/#summary
 
+December 22, 2024 - Sunday
+
+https://www.gnu.org/licenses/gpl-3.0.en.html#license-text
+
