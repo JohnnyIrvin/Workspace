@@ -46,6 +46,15 @@ def main() -> int:
     target = pathlib.Path(args.target)
     list1, list2 = read_file(target)
     
+    dictionary = {key: 0 for key in list1}
+    
+    for value in list2:
+        if value in dictionary:
+            dictionary[value] += 1
+    
+    result = sum([key * value for key, value in dictionary.items()])
+    
+    print(f'The result is {result}')
     
     return 0
 
