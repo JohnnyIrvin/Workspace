@@ -1,0 +1,10 @@
+Part 1:
+
+- Each line is called a "report"
+- Each report contains a list of numbers called "levels" separated by spaces
+- A report is safe if:
+  - The levels are either all increasing or all decreasing
+  - Any two adjacent levels differ by at least one and at most three
+- Iterate each line, execute is_safe
+- If is_safe, increment a counter
+- Return the counter
