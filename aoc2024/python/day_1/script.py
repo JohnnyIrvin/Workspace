@@ -51,7 +51,10 @@ def main() -> int:
     target = pathlib.Path(args.target)
     list1, list2 = read_file(target)
     
-    print(list1[:5], list2[:5])
+    list1, list2 = sorted(list1), sorted(list2)
+    total = sum(abs(a - b) for a, b in zip(list1, list2))
+    
+    print(f'The sum of the absolute differences between the two lists is {total}')
     
     return 0
 
