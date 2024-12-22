@@ -1,0 +1,34 @@
+December 21, 2024 - Saturday
+
+git init
+git config --global init.defaultBranch trunk
+git branch -m trunk
+cat .gitignore
+gh repo create Workspace --public --source=. --remote=upstream
+gh repo --help
+gh repo edit --help
+gh repo edit --enable-squash-merge=false
+gh repo edit --enable-merge-commit=false
+
+gh repo edit --description "A central hub for tracking and showcasing Johnathan (Johnny) Irvin's ongoing works before they transition to dedicated repositories. Explore work-in-progress, prototypes, and ideas as they evolve."
+
+Create a description for a repository I created called Workspace. The workspace repository is meant to be an active an on-going repository where I keep track of projects I work on before moving them to their own repositories and etc. Its a place for me to keep track of my work while showing others what I'm working on.
+
+
+Repository Description: Workspace
+Workspace is an active, ongoing repository where I document, organize, and track my current projects and ideas before they are finalized and moved to their own dedicated repositories. This repository serves as a central hub for experimentation, prototyping, and progress tracking, offering insight into what I’m working on and how my ideas evolve over time.
+
+Whether it’s coding, design, or brainstorming, this space provides a transparent view of my workflow and the early stages of my projects.
+
+Feel free to explore my latest work in progress, provide feedback, or follow along as projects take shape and transition into their final form.
+
+now make it shorter so that I can put it in the description of the repository.
+
+A central hub for tracking and showcasing my ongoing projects before they transition to dedicated repositories. Explore my work-in-progress, prototypes, and ideas as they evolve.
+
+git config --global push.autoSetupRemote true 
+
+git config --local core.hooksPath .githooks/
+
+https://www.conventionalcommits.org/en/v1.0.0/#summary
+
