@@ -8,3 +8,10 @@ Part 1:
 - Iterate each line, execute is_safe
 - If is_safe, increment a counter
 - Return the counter
+
+Part 2:
+
+- Tolerate a single bad level
+- Add a bad_index. If set, ignore that index
+- If bad_index is already set, return false
+
