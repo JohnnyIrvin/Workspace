@@ -1,0 +1,7 @@
+Part 1:
+
+- Create a tokenizer
+- tokens: mul, (, number, comma, ) 
+- Parse the tokens
+- Evaluate the tokens
+- Sum the results
