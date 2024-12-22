@@ -10,15 +10,10 @@ DESCRIPTION = \
     
     The challenges requires:
     
-    - Sorts each list of numbers from lowest to highest (ascending order)
-    - Starting at index 0, compares the two lists of numbers.
-    - The comparison is done by taking the absolute difference between the two numbers.
-    - The differences are summed.
-    - The sum is the answer to the challenge.
-    
-    Formula:
-    
-    sum(abs(a - b) for a, b in zip(list1, list2))
+    - Use list one to create a dictionary with keys and values to zero
+    - Loop through list two and check if the value is in the dictionary
+    - If the value is in the dictionary, increment the value by one
+    - For each key multiply it by the value and sum the results
     """
     
 def read_file(file: pathlib.Path) -> tuple[list[int], list[int]]:
@@ -51,10 +46,6 @@ def main() -> int:
     target = pathlib.Path(args.target)
     list1, list2 = read_file(target)
     
-    list1, list2 = sorted(list1), sorted(list2)
-    total = sum(abs(a - b) for a, b in zip(list1, list2))
-    
-    print(f'The sum of the absolute differences between the two lists is {total}')
     
     return 0
 
