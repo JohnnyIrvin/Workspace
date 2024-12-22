@@ -1,3 +1,5 @@
+Part 1:
+
 location ID, a unique number.
 lists compared side by side
 list compared smallest to highest.
@@ -9,3 +11,8 @@ list compared smallest to highest.
 Sum(i=0 to n) of abs(x[i]-y[i]) where n is the total array size, x is array one and y is array two.
 
 
+Part 2:
+
+1. Create a dictionary of the left list as the keys, setting the values to 0.
+2. Loop through the second list, incrementing the value of the key in the dictionary.
+3. for each item multiply it by its value in the dictionary and then summation of all the values.
