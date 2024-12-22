@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import argparse
+import pathlib
 
 DESCRIPTION = \
     """
@@ -19,6 +20,26 @@ DESCRIPTION = \
     
     sum(abs(a - b) for a, b in zip(list1, list2))
     """
+    
+def read_file(file: pathlib.Path) -> tuple[list[int], list[int]]:
+    """
+    Reads a file and returns a tuple of two lists of integers.
+    
+    :param file: The file to read
+    :return: A tuple of two lists of integers
+    """
+    assert file.exists(), f'File {file} does not exist'
+    
+    separator: str = ' ' * 3
+    list1, list2 = [], []
+    
+    with file.open('r') as f:
+        for line in f:
+            entry1, entry2 = line.split(separator)
+            list1.append(int(entry1))
+            list2.append(int(entry2))
+
+    return list1, list2
 
 def main() -> int:
     # Requires a file for target
@@ -26,7 +47,11 @@ def main() -> int:
     parser.add_argument('target', type=str, help='File containing the target')
     args = parser.parse_args()
     
-    print(args.target)
+    # Read the file
+    target = pathlib.Path(args.target)
+    list1, list2 = read_file(target)
+    
+    print(list1[:5], list2[:5])
     
     return 0
 
